@@ -1,136 +1,196 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thevenin Education Services | Study Abroad & Visa Support</title>
 
-  <!-- SEO -->
-  <title>Thevenin Education Services | Study Abroad & Career Guidance</title>
-  <meta name="description" content="Thevenin Education Services helps students pursue higher education abroad with expert guidance on applications, visas, scholarships, and career opportunities." />
-  <meta name="keywords" content="study abroad, education consultancy, UK universities, student visa, scholarships, Thevenin Education Services" />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Thevenin Education Services helps students achieve their global education dreams. Study abroad support, scholarships, visa guidance, admissions, and tutoring.">
+  <meta name="keywords" content="Thevenin Education Services, study abroad, scholarships, visa support, admissions, tutoring, education consultancy, UK study, international education">
+  <meta name="author" content="Thevenin Education Services">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Thevenin Education Services" />
-  <meta property="og:description" content="Expert study abroad consultancy guiding students through applications, visas, scholarships, and career opportunities." />
-  <meta property="og:url" content="https://www.theveninedu.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.theveninedu.com/logo.jpg" />
+  <!-- Open Graph (OG) for Social Sharing -->
+  <meta property="og:title" content="Thevenin Education Services">
+  <meta property="og:description" content="Guiding students to study abroad with admissions, scholarships, and visa support.">
+  <meta property="og:image" content="hero-fallback.jpg">
+  <meta property="og:url" content="https://theve.netlify.app/">
+  <meta property="og:type" content="website">
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Thevenin Education Services" />
-  <meta name="twitter:description" content="Helping students achieve their study abroad dreams with expert application and visa support." />
-  <meta name="twitter:image" content="https://www.theveninedu.com/logo.jpg" />
+  <meta name="twitter:description" content="Study abroad support, scholarships, visa guidance, admissions, and tutoring." />
+  <meta name="twitter:image" content="hero-fallback.jpg" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Thevenin Education Services",
+    "url": "https://theve.netlify.app/",
+    "logo": "hero-fallback.jpg",
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.linkedin.com/",
+      "https://www.instagram.com/"
+    ],
+    "description": "Guiding students worldwide to achieve academic and career success through study abroad, scholarships, admissions, and visa support.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Newcastle upon Tyne",
+      "addressCountry": "UK"
+    }
+  }
+  </script>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; line-height:1.6; color:#333;}
+    header {position:sticky;top:0;background:#004080;color:#fff;padding:1rem;z-index:1000;}
+    header nav {display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:auto;}
+    header nav a {color:#fff;text-decoration:none;margin:0 0.5rem;font-weight:bold;}
+    header nav a:hover {text-decoration:underline;}
+    .hero {position:relative;height:80vh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;background:url('hero-fallback.jpg') center/cover no-repeat;}
+    .hero::after {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+    .hero-content {position:relative;z-index:2;}
+    .hero h1 {font-size:3rem;margin-bottom:1rem;}
+    .section {padding:4rem 1rem;max-width:1100px;margin:auto;}
+    .section h2 {text-align:center;margin-bottom:2rem;font-size:2rem;color:#004080;}
+    .cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+    .card {background:#f9f9f9;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;transition:transform 0.2s;}
+    .card:hover {transform:translateY(-5px);}
+    .card img {width:100%;height:200px;object-fit:cover;}
+    .card-body {padding:1rem;}
+    .team {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+    .team-member {text-align:center;background:#fff;border:1px solid #eee;border-radius:8px;padding:1rem;}
+    .team-member img {width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
+    form {display:grid;gap:1rem;max-width:600px;margin:auto;}
+    input, textarea {padding:0.75rem;border:1px solid #ccc;border-radius:4px;width:100%;}
+    button {background:#004080;color:#fff;border:none;padding:0.75rem;font-weight:bold;cursor:pointer;border-radius:4px;}
+    button:hover {background:#003366;}
+    footer {background:#004080;color:#fff;text-align:center;padding:1rem;margin-top:2rem;}
+  </style>
 </head>
-
 <body>
   <!-- Header -->
   <header>
-    <div class="container">
-      <h1>Thevenin Education Services</h1>
-      <p>Helping students achieve their study abroad dreams.</p>
-      <nav>
-        <ul>
-          <li><a href="#about">Who We Are</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <div class="logo"><strong>Thevenin Education Services</strong></div>
+      <div>
+        <a href="#who">Who We Are</a>
+        <a href="#services">Services</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <h2>Your Future Starts Here</h2>
-      <p>Guiding students through applications, visas, scholarships, and career opportunities worldwide.</p>
-      <a href="#contact" class="btn">Get Started</a>
+    <div class="hero-content">
+      <h1>Empowering Your Global Education Journey</h1>
+      <p>Study abroad, scholarships, and tailored guidance.</p>
     </div>
   </section>
 
   <!-- Who We Are -->
-  <section id="about">
-    <div class="container">
-      <h2>Who We Are</h2>
-      <p>Thevenin Education Services is dedicated to helping students pursue higher education abroad. Our expert team provides end-to-end support — from applications and visas to scholarships and career guidance.</p>
-      <img src="about-us.jpg" alt="About Thevenin Education Services" />
+  <section id="who" class="section">
+    <h2>Who We Are</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="who-we-are.jpg" alt="Students learning abroad with Thevenin Education Services">
+        <div class="card-body">
+          <h3>Our Mission</h3>
+          <p>We connect students with opportunities worldwide, guiding them through every step of the process with integrity and care.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="graduation-image.jpg" alt="Graduation ceremony image">
+        <div class="card-body">
+          <h3>Our Vision</h3>
+          <p>To empower every learner with access to quality education and pathways to success, regardless of background.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service">
-          <img src="application.jpg" alt="Application Support" />
-          <h3>Application Guidance</h3>
-          <p>We assist students with university applications to ensure a smooth process and successful outcomes.</p>
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="service-uk.jpg" alt="UK study abroad opportunities">
+        <div class="card-body">
+          <h3>Study in the UK</h3>
+          <p>Guidance and support for university applications across the UK.</p>
         </div>
-        <div class="service">
-          <img src="visa.jpg" alt="Visa Assistance" />
-          <h3>Visa Assistance</h3>
-          <p>Our team provides professional support with student visa applications and documentation.</p>
+      </div>
+      <div class="card">
+        <img src="service-intl.jpg" alt="International education opportunities">
+        <div class="card-body">
+          <h3>Global Admissions</h3>
+          <p>Opportunities to study in top institutions around the world.</p>
         </div>
-        <div class="service">
-          <img src="scholarship.jpg" alt="Scholarship Guidance" />
-          <h3>Scholarships</h3>
-          <p>We help students explore and apply for scholarships to make education abroad more affordable.</p>
+      </div>
+      <div class="card">
+        <img src="service-tutor.jpg" alt="Tutoring and IELTS preparation">
+        <div class="card-body">
+          <h3>Test Prep & Tutoring</h3>
+          <p>Personalised coaching for IELTS, TOEFL, and other entrance exams.</p>
         </div>
-        <div class="service">
-          <img src="career.jpg" alt="Career Counseling" />
-          <h3>Career Counseling</h3>
-          <p>Our career advisors guide students in making informed choices about their future careers.</p>
+      </div>
+      <div class="card">
+        <img src="service-visa.jpg" alt="Visa support and guidance">
+        <div class="card-body">
+          <h3>Visa Support</h3>
+          <p>Expert advice and support to help you secure your student visa.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Team -->
-  <section id="team">
-    <div class="container">
-      <h2>Meet Our Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="team1.jpg" alt="Team Member 1" />
-          <h3>Jane Doe</h3>
-          <p>Senior Education Consultant</p>
-        </div>
-        <div class="team-member">
-          <img src="team2.jpg" alt="Team Member 2" />
-          <h3>John Smith</h3>
-          <p>Visa & Immigration Specialist</p>
-        </div>
-        <div class="team-member">
-          <img src="team3.jpg" alt="Team Member 3" />
-          <h3>Sarah Lee</h3>
-          <p>Scholarship Advisor</p>
-        </div>
+  <section id="team" class="section">
+    <h2>Our Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="team-1.jpg" alt="Admissions consultant at Thevenin">
+        <h3>Application Support</h3>
+        <p>Helping students prepare and submit strong university applications.</p>
+      </div>
+      <div class="team-member">
+        <img src="team-2.jpg" alt="University admissions specialist">
+        <h3>Admissions Specialist</h3>
+        <p>Expert guidance on securing admission to top universities.</p>
+      </div>
+      <div class="team-member">
+        <img src="team-3.jpg" alt="Visa consultant for students">
+        <h3>Visa Consultant</h3>
+        <p>Supporting students with every step of their visa applications.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:info@theveninedu.com">info@theveninedu.com</a></p>
-      <p>Visit us: www.theveninedu.com</p>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div style="margin-top:2rem;text-align:center;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9395.98396112783!2d-1.6174391!3d54.9782525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e70cbb3d3178f%3A0xadb3d44d6742a7af!2sNewcastle%20upon%20Tyne!5e0!3m2!1sen!2suk!4v1692876000000!5m2!1sen!2suk"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Thevenin Education Services. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Thevenin Education Services. All rights reserved.</p>
   </footer>
 </body>
 </html>
